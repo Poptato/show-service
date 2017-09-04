@@ -17,7 +17,7 @@ app.use("/theaters", TheaterController);
 app.use("/shows", ShowController);
 
 app.listen(port, () => {
-   console.log(`Movie service is running on port ${port}`);
+   console.log(`Shows service is running on port ${port}`);
 });
 
 module.exports = app;
