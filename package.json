@@ -1,0 +1,21 @@
+{
+  "name": "theater-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "node ./test/assets/initDb"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.0.37",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "pluralize": "^7.0.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
+    "thinky": "^2.3.8"
+  }
+}
