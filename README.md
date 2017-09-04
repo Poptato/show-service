@@ -1,2 +1,2 @@
-# shows-service
+# Shows
 > Poptato's theater management micro-service
