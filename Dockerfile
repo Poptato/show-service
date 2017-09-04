@@ -2,5 +2,5 @@ FROM node:8.3.0
 WORKDIR /usr/app
 COPY . .
 RUN npm install --silent
-EXPOSE 80
+EXPOSE 4000
 CMD ["npm", "run", "start"]
