@@ -10,7 +10,7 @@ ShowController.get("/", async (req, res) => {
             .getJoin({cinema: true, theater: true})
             .run();
 
-        if (req.query.include_movie) {
+        if (req.query.include_movie === "true") {
             for (show of shows) {
                 show.movie = await MovieService.getMovieInfoBy(show.movieId);
             }
@@ -39,7 +39,7 @@ ShowController.get("/:showId", async (req, res) => {
            .getJoin({cinema: true, theater: true})
            .run();
 
-       if (req.query.include_movie) {
+       if (req.query.include_movie === "true") {
            show.movie = await MovieService.getMovieInfoBy(show.movieId);
        }
 
@@ -81,6 +81,11 @@ ShowController.put("/:showId/sales", async (req, res) => {
        if (0 <= seats && seats <= show.theater.seats) {
            show.availableSeats = seats;
            let updated = await show.saveAll();
+
+           if (req.query.include_movie === "true") {
+               updated.movie = await MovieService.getMovieInfoBy(updated.movieId);
+           }
+
            res.send(updated);
        }
 

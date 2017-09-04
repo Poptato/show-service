@@ -1,13 +1,16 @@
 {
   "name": "theater-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Poptato's theater management micro-service",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",
     "test": "node ./test/assets/initDb"
   },
-  "author": "",
+  "author": "Idan A. <idan5x@live.com> (idan5x.github.io)",
+  "contributors": [
+
+  ],
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.0.37",
