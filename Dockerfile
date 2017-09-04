@@ -1,4 +1,4 @@
-FROM node:8.3.0
+FROM node:8.3.0-alpine
 WORKDIR /usr/app
 COPY . .
 RUN npm install --silent
