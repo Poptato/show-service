@@ -81,11 +81,6 @@ ShowController.put("/:showId/sales", async (req, res) => {
        if (0 <= seats && seats <= show.theater.seats) {
            show.availableSeats = seats;
            let updated = await show.saveAll();
-
-           if (req.query.include_movie === "true") {
-               updated.movie = await MovieService.getMovieInfoBy(updated.movieId);
-           }
-
            res.send(updated);
        }
 
