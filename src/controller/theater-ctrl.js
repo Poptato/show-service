@@ -39,7 +39,7 @@ TheaterController.get("/:theaterId", async (req, res) => {
    }
 });
 
-TheaterController.delete("/:theaterId", (req, res) => {
+TheaterController.delete("/:theaterId", async (req, res) => {
     try {
         let deleted = Theater.get(req.params.theaterId).delete().run();
         res.send(deleted);

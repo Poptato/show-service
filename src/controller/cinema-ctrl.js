@@ -40,7 +40,7 @@ CinemaController.get("/:cinemaId", async (req, res) => {
    }
 });
 
-CinemaController.delete("/:cinemaId", (req, res) => {
+CinemaController.delete("/:cinemaId", async (req, res) => {
     try {
         let deleted = Cinema.get(req.params.cinemaId).delete().run();
         res.send(deleted);
