@@ -8,7 +8,6 @@
     "test": "node ./test/assets/initDb"
   },
   "author": "Idan A. <idan5x@live.com> (idan5x.github.io)",
-  "contributors": [],
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.2",

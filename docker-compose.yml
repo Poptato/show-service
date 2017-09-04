@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: rethinkdb:2.3.5
+    ports:
+      - 4005:8080
+
+  show-service:
+    build: .
+    working_dir: /usr/app
+    depends_on:
+      - db
+    ports:
+      - 4000:4000
+    environment:
+      - DB_HOST=db
+    command: ["npm", "run", "test"]
