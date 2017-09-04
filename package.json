@@ -1,5 +1,5 @@
 {
-  "name": "shows-service",
+  "name": "show-service",
   "version": "1.0.0",
   "description": "Poptato's shows management micro-service",
   "main": "./src/server.js",
