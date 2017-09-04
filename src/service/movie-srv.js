@@ -1,6 +1,6 @@
 const request = require("request-promise-native");
 
-const host = process.env.MOVIE_SERVICE || "http://ocalhost:4000";
+const host = process.env.MOVIE_SERVICE_HOST;
 
 class MovieService {
     static async getMovieInfoBy(id) {
