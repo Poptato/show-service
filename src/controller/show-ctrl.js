@@ -45,7 +45,7 @@ ShowController.get("/:showId", async (req, res) => {
 
        res.send(show);
    } catch(e) {
-       res.setStatus(500).send({message: e.toString()});
+       res.status(500).send({message: e.toString()});
    }
 });
 
