@@ -1,0 +1,50 @@
+[
+  {
+    "id": "c95d1fce-58a8-4046-9b46-57ccdf064461",
+    "time": "2017-10-31T22:00:00.000Z",
+    "availableSeats": 40,
+    "movieId": "4fc42ea3-9918-4f69-b27c-a899c5c47af4",
+    "cinemaId": "6de5d16c-3762-4472-9497-9d2d39b21bec",
+    "theaterId": "a6dca98f-33cd-46ec-ae9a-792f747c1800"
+  },
+  {
+    "id": "97bb0034-cca9-4cbd-97a4-7fc892a1a2a7",
+    "time": "2017-10-31T22:00:00.000Z",
+    "availableSeats": 50,
+    "movieId": "26682488-eda7-4b97-8cb6-08f71252d5de",
+    "cinemaId": "6de5d16c-3762-4472-9497-9d2d39b21bec",
+    "theaterId": "8c22b35c-0ef0-4a18-881c-ebb3fa2e6385"
+  },
+  {
+    "id": "eb0c6d1b-ada3-4666-bb07-3f31a43567da",
+    "time": "2017-10-31T22:00:00.000Z",
+    "availableSeats": 40,
+    "movieId": "8c5bf4a8-6e50-4b6e-8a4c-a23256a9d20f",
+    "cinemaId": "6de5d16c-3762-4472-9497-9d2d39b21bec",
+    "theaterId": "a4d636ed-9c6f-4540-bee2-84fd9927974e"
+  },
+  {
+    "id": "3403989a-9e4f-494a-915d-d9b8e11b175c",
+    "time": "2017-10-31T22:00:00.000Z",
+    "availableSeats": 60,
+    "movieId": "4fc42ea3-9918-4f69-b27c-a899c5c47af4",
+    "cinemaId": "14391643-2d9c-4301-9d0a-ea002e062694",
+    "theaterId": "e47e3784-30a2-41b6-8ba5-2cee7b0b78c4"
+  },
+  {
+    "id": "22b62a56-8392-44fb-90b3-2d05b4a29e19",
+    "time": "2017-10-31T22:00:00.000Z",
+    "availableSeats": 50,
+    "movieId": "26682488-eda7-4b97-8cb6-08f71252d5de",
+    "cinemaId": "14391643-2d9c-4301-9d0a-ea002e062694",
+    "theaterId": "156ba430-e210-4f0f-871f-8ae6832e36d4"
+  },
+  {
+    "id": "fafdd5eb-c5f3-4c90-a083-ef9f2e52ee5e",
+    "time": "2017-10-31T22:00:00.000Z",
+    "availableSeats": 40,
+    "movieId": "0b7abbb4-c286-4e5a-a2d8-1927295c99be",
+    "cinemaId": "14391643-2d9c-4301-9d0a-ea002e062694",
+    "theaterId": "14391643-2d9c-4301-9d0a-ea002e062694"
+  }
+]

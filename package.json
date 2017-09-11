@@ -5,7 +5,11 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "test": "node ./test/assets/initDb"
+    "start:preloaded": "npm run preload && npm run start",
+    "preload": "node -e \"require('./test/assets/db-init').go()\"",
+    "test:unit": "mocha test/unit/**/*.spec.js",
+    "test:api": "mocha test/api/**/*.spec.js",
+    "test": "npm run test:unit && npm run test:api"
   },
   "author": "Idan A. <idan5x@live.com> (idan5x.github.io)",
   "license": "MIT",

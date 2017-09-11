@@ -1,0 +1,38 @@
+[
+  {
+    "id": "a6dca98f-33cd-46ec-ae9a-792f747c1800",
+    "name": "GlobosMax 1",
+    "seats": 40,
+    "cinemaId": "6de5d16c-3762-4472-9497-9d2d39b21bec"
+  },
+  {
+    "id": "8c22b35c-0ef0-4a18-881c-ebb3fa2e6385",
+    "name": "GlobosMax 2",
+    "seats": 50,
+    "cinemaId": "6de5d16c-3762-4472-9497-9d2d39b21bec"
+  },
+  {
+    "id": "a4d636ed-9c6f-4540-bee2-84fd9927974e",
+    "name": "GlobosMax 3",
+    "seats": 40,
+    "cinemaId": "6de5d16c-3762-4472-9497-9d2d39b21bec"
+  },
+  {
+    "id": "e47e3784-30a2-41b6-8ba5-2cee7b0b78c4",
+    "name": "CinemaCity 1",
+    "seats": 60,
+    "cinemaId": "14391643-2d9c-4301-9d0a-ea002e062694"
+  },
+  {
+    "id": "156ba430-e210-4f0f-871f-8ae6832e36d4",
+    "name": "CinemaCity 2",
+    "seats": 50,
+    "cinemaId": "14391643-2d9c-4301-9d0a-ea002e062694"
+  },
+  {
+    "id": "f36e01e8-b974-4fdb-a212-8949c18783ad",
+    "name": "CinemaCity 3",
+    "seats": 40,
+    "cinemaId": "14391643-2d9c-4301-9d0a-ea002e062694"
+  }
+]
