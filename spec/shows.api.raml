@@ -1,0 +1,114 @@
+#%RAML 1.0
+title: Poptato Show Service
+version: v1
+
+# =================
+#     LIBRARIES
+# =================
+uses:
+  Common: ../node_modules/poptato-common-raml/common.lib.raml
+
+
+# ==============
+#     TYPES
+# ==============
+types:
+  Show:
+    type: object
+    properties:
+      id:
+        type: integer
+      time:
+        description: The screening time
+        type: datetime
+      availableSeats:
+        description: The number of available seats
+        type: integer
+        minimum: 0
+      movieId:
+        type: integer
+      cinema:
+        description: The cinema where the screening is
+        type: Cinema
+      theater:
+        description: The theater where the screening is
+        type: Theater
+
+  Cinema:
+    description: A cinema
+    type: object
+    properties:
+      id:
+        type: integer
+      address:
+        description: The location of the cinema
+        type: string
+      name:
+        description: The name of the cinema
+        type: string
+      shows:
+        description: The screenings at the cinema
+        type: Show
+      theaters:
+        description: The theaters in the cinema
+        type: Theater
+
+  Theater:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        description: The name of the theater
+        type: string
+      seats:
+        description: The number of seats in the theater
+        type: integer
+      cinema:
+        description: The cinema in which the theater is in
+        type: Cinema
+      shows:
+        description: The screenings in this theater
+        type: Show
+
+# =================
+#     ENDPOINTS
+# =================
+/cinemas:
+  type:
+    Common.PagedCollection:
+      typeName: Cinema
+  /{cinemaId}:
+    type:
+      Common.Item:
+        typeName: Cinema
+    /shows:
+      type:
+        Common.PagedCollection:
+          typeName: Show
+    /theaters:
+      type:
+        Common.Item:
+          typeName: Theater
+
+/theaters:
+  type:
+    Common.PagedCollection:
+      typeName: Theater
+  /{theaterId}:
+    type:
+      Common.Item:
+        typeName: Theater
+    /shows:
+      type:
+        Common.PagedCollection:
+          typeName: Show
+
+/shows:
+  type:
+    Common.PagedCollection:
+      typeName: Show
+  /{showId}:
+    type:
+      Common.Item:
+        typeName: Show

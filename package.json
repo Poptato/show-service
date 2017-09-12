@@ -9,7 +9,9 @@
     "preload": "node -e \"require('./test/assets/db-init').go()\"",
     "test:unit": "mocha test/unit/**/*.spec.js",
     "test:api": "mocha test/api/**/*.spec.js",
-    "test": "npm run test:unit && npm run test:api"
+    "test": "npm run test:unit && npm run test:api",
+    "gen:docs": "./node_modules/.bin/raml2html spec/shows.api.raml > docs/index.html",
+    "prepublish": "npm run test && npm run gen:docs"
   },
   "author": "Idan A. <idan5x@live.com> (idan5x.github.io)",
   "license": "MIT",
@@ -18,7 +20,8 @@
     "express": "^4.15.4",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4",
-    "thinky": "^2.3.8"
+    "thinky": "^2.3.8",
+    "poptato-common-raml": "^0.3.0"
   },
   "devDependencies": {
     "@types/chai": "^4.0.4",
@@ -32,6 +35,7 @@
     "mocha": "^3.5.0",
     "sinon": "^3.1.0",
     "sinon-chai": "^2.13.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "raml2html": "^6.4.1"
   }
 }

@@ -1,23 +1,25 @@
-const Express = require("express");
+const express = require("express");
 const bodyParser = require("body-parser");
+const {join} = require("path");
 
 const InfoController = require("./controller/info-ctrl");
 const CinemaController = require("./controller/cinema-ctrl");
 const TheaterController = require("./controller/theater-ctrl");
 const ShowController = require("./controller/show-ctrl");
 
-let app = new Express();
+let server = new express();
 let port = process.env.PORT || 4000;
 
-app.use(bodyParser.json());
+server.use(bodyParser.json());
 
-app.use("/info", InfoController);
-app.use("/cinemas", CinemaController);
-app.use("/theaters", TheaterController);
-app.use("/shows", ShowController);
+server.use("/info", InfoController);
+server.use("/cinemas", CinemaController);
+server.use("/theaters", TheaterController);
+server.use("/shows", ShowController);
+server.use("/docs", express.static("/docs", join(__dirname, "../docs")))
 
-app.listen(port, () => {
+server.listen(port, () => {
    console.log(`Shows service is running on port ${port}`);
 });
 
-module.exports = app;
+module.exports = server;
