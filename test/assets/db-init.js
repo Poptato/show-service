@@ -39,12 +39,12 @@ class DbInitializer {
             return await Promise.all(mockShows.map(s => Show(s).save()));
         }
     }
-}
 
-module.exports.go = async function() {
-    const initializer = new DbInitializer();
-    await initializer.init();
-    process.exit();
-};
+    static async go() {
+        const initializer = new DbInitializer();
+        await initializer.init();
+        process.exit();
+    };
+}
 
 module.exports.default = DbInitializer;
