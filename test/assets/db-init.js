@@ -47,4 +47,4 @@ class DbInitializer {
     };
 }
 
-module.exports.default = DbInitializer;
+module.exports = DbInitializer;
